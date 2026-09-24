@@ -7,7 +7,7 @@ const url='http://127.0.0.1:4173/Saeid-Mocha-/';
 const browserPaths=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser'].filter(Boolean);
 const chrome=browserPaths.find(p=>existsSync(p));
 assert.ok(chrome,'Chromium or Google Chrome must be installed for the browser smoke test');
-const server=spawn('npm',['run','preview','--','--host','127.0.0.1','--port','4173','--strictPort'],{stdio:['ignore','pipe','pipe']});
+const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','4173','--strictPort'],{stdio:['ignore','pipe','pipe']});
 server.stdout.on('data',d=>process.stdout.write(d));server.stderr.on('data',d=>process.stderr.write(d));
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 let browser;
