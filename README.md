@@ -25,3 +25,7 @@ npm run dev
 ## Attribution and scope
 
 Original Saeid/Mocha artwork was provided by the game creator; the game uses cutouts derived from that art, not generic replacement characters. Sprite motion is procedural (hovering, tilting, squash-and-stretch) rather than a full hand-drawn frame-by-frame animation set. The electronic soundtrack is generated in real time. No commercial artwork, sound, code or branding from Jetpack Joyride is used. All purchases are in-game earned currency only. No analytics or server account.
+
+## Quality and mobile experience
+
+The game includes bounded, reachable obstacle corridors, delayed missile warnings, pooled particles, throttled HUD updates, and a choice to play in portrait or rotate to landscape. GitHub Actions runs the unit suite, TypeScript checking and the production build before deploying each release.
